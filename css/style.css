@@ -1,0 +1,229 @@
+:root{
+    --orange: hsl(26, 100%, 55%);
+    --pale-orange: hsl(25, 100%, 94%);
+    --dark-blue: hsl(220, 13%, 13%);
+    --dark-grayish-blue: hsl(219, 9%, 45%);
+    --light-grayish-blue: hsl(223, 64%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+}
+@font-face {
+    font-family: "Kumbh Sans";
+    src: url('./Kumbh_Sans/KumbhSans-VariableFont_wght.ttf');
+}
+
+html{
+    box-sizing: border-box;
+    color: var(--black);
+    font-family: "Kumbh Sans";
+    font-size: 1em;
+}
+
+button{
+    cursor: pointer;
+}
+
+nav > ul{
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    margin: 0 auto;
+    list-style: none;
+    padding: 2em;
+    border-bottom: 1px solid grey;
+    box-sizing: content-box;
+    /* box-sizing:  !important; */
+}
+
+nav > ul, .nav-links, .nav-images, .container, .image-thumbnail-container, .add-cart, .quantity-button-span, .cart-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container, .nav-images, .cart-item{
+    justify-content: space-around !important;
+}
+
+.nav-links{
+    width: 50%;
+}
+
+.nav-links > li a{
+    padding-bottom: calc(2em + 10px);
+}
+
+.nav-links > li a:hover{
+    border-bottom: .3em solid var(--orange);
+    transition: .1s linear;
+}
+
+.product-description{
+    margin-left: -5%;
+    width: 30%;
+}
+
+.nav-images{
+    width: 20%;
+}
+
+.user-image{
+    width: 40px;
+}
+
+.container{
+    margin: 32px auto;
+    width: 80%;
+}
+
+.large-image > img{
+    width: 25vw;
+    max-height: 60vh;
+    border-radius: 12px;
+}
+
+.image-thumbnail-container > img{
+    border-radius: 12px;
+    width: 64px;
+}
+
+.cart-thumbnail{
+    border-radius: 12px;
+    width: 3em;
+}
+
+.image-thumbnail-container{
+    margin: 6px 8px;
+}
+
+.prices > p{
+    display: inline;
+    margin-right: 18px;
+}
+
+p.company-title{
+    text-transform: uppercase;
+    color: var(--orange, orange);
+    margin-bottom: -23px;
+}
+
+.product-title{
+    font-size: 2.3em;
+}
+
+p.product-description-text{
+    width: 120%;
+}
+
+.add-to-cart-btn{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 70%;
+}
+.add-to-cart-btn > span{
+    margin-left: 12px;
+    width: 100%;
+}
+
+p.product-description-text, .price-cut{
+    color: var(--dark-grayish-blue);
+}
+
+.discount-price{
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.discount{
+    border-radius: 7px;
+    padding: 6px 9px;
+    background-color: var(--pale-orange);
+    color: var(--orange);
+    font-weight: 400;
+}
+
+.price-cut{
+    text-decoration: line-through;
+}
+
+.product-description-text{
+    padding-bottom: 1.2em;
+}
+.add-cart{
+    width: 130%;
+    margin-top: 1.3em;
+}
+.quantity-button-span{
+    border-radius: 12px;
+    background-color: var(--light-grayish-blue);
+    width: 40%;
+    font-weight: 700;
+}
+
+.quantity-button-span > button, .add-to-cart-btn{
+    border: none;
+    outline: none;
+}
+
+.quantity-button-span > button{
+    background-color: inherit;
+}
+
+.quantity-button-span > button:nth-child(1){
+    position: relative;
+    top: -3px;
+}
+
+.add-to-cart-btn{
+    border-radius: 12px;
+    background-color: var(--orange);
+    color: var(--white);
+    margin-left: 20px;
+    padding: 1.1em 5em;
+    font-family: inherit;
+}
+
+#cart{
+    position: absolute;
+    margin: 0 auto;
+    top: 100px;
+    right: 50px;
+    background-color: var(--white);
+    width: 25vw;
+    /* width: auto; */
+    min-height: 30vh;
+    box-shadow: 1px 2px 13px 2px rgb(194, 194, 194);
+    z-index: 12;  
+}
+#cart > p{
+    /* margin: 12px; */
+    padding: 3px 12px 5px;
+    border-bottom: 1px solid rgb(194, 194, 194);
+}
+
+.dropdown-container{
+    position: relative;
+    cursor: pointer;
+}
+
+.empty{
+    text-align: center;
+    color: var(--dark-grayish-blue);
+    transform: translateY(50%);
+}
+
+.cart-item{
+    color: var(--dark-grayish-blue);
+}
+
+.none{
+    display: none;
+}
+
+.delete-btn{
+    border: none;
+    outline: none;
+    background-color: inherit;
+}
