@@ -9,7 +9,7 @@
 }
 @font-face {
     font-family: "Kumbh Sans";
-    src: url('./Kumbh_Sans/KumbhSans-VariableFont_wght.ttf');
+    src: url('../Kumbh_Sans/KumbhSans-VariableFont_wght.ttf');
 }
 
 html{
@@ -81,6 +81,7 @@ nav > ul, .nav-links, .nav-images, .container, .image-thumbnail-container, .add-
     width: 25vw;
     max-height: 60vh;
     border-radius: 12px;
+    cursor: pointer;
 }
 
 .image-thumbnail-container > img{
@@ -227,3 +228,4 @@ p.product-description-text, .price-cut{
     outline: none;
     background-color: inherit;
 }
+

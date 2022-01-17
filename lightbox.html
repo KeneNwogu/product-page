@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lightbox mock</title>
+        <style>
+            * {
+                margin: 0;
+            }
+
+            #lightbox {
+                width: 100vw;
+                height: 100vh;
+                background-color: rgb(102, 102, 102, 0.1);
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+            }
+            .large-image{
+                position: relative;
+            }
+            .large-image>img {
+                width: 30vw;
+                max-height: 65vh;
+                border-radius: 12px;
+                cursor: pointer;
+                margin-bottom: 20px;
+            }
+
+            .image-thumbnail-container>img {
+                border-radius: 12px;
+                width: 64px;
+                margin: 12px;
+            }
+
+            .cart-thumbnail {
+                border-radius: 12px;
+                width: 3em;
+            }
+
+            .image-thumbnail-container {
+                margin: 6px 8px;
+            }
+            .nav-icon{
+                padding: 12px;
+                width: 12px;
+                height: 12px;
+                background-color: white;
+                /* margin: 10px; */
+                border-radius: 50%;
+                position: relative;
+                cursor: pointer;
+            }
+            .nav-icon>img{
+                position: absolute;
+                bottom: 20%;
+            }
+            .previous{
+                position: absolute;
+                top: 50%;
+                right: 95%;
+            }
+            .next{
+                position: absolute;
+                top: 50%;
+                left: 95%;
+            }
+            .close{
+                position: absolute;
+                bottom: 100%;
+                cursor: pointer;
+            }
+            .active{
+                border: 1.9px solid orange;
+            }
+        </style>
+    </head>
+
+    <body>
+        <section id="lightbox">
+            <div class="large-image">
+                <img src="./images/image-product-1.jpg" alt="">
+                <span class="nav-icon previous">
+                    <img src="./images/icon-previous.svg" alt="">
+                </span>
+                <span class="nav-icon next">
+                    <img src="./images/icon-next.svg" alt="" srcset="">
+                </span>  
+                <span class="close">
+                    <img src="./images/icon-close.svg" alt="" srcset="">
+                </span>  
+            </div>
+
+            <div class="image-thumbnail-container">
+                <img src="./images/image-product-1-thumbnail.jpg" alt="" class="thumbnail active">
+                <img src="./images/image-product-2-thumbnail.jpg" alt="" class="thumbnail">
+                <img src="./images/image-product-3-thumbnail.jpg" alt="" class="thumbnail">
+                <img src="./images/image-product-4-thumbnail.jpg" alt="" class="thumbnail">
+            </div>
+        </section>
+        <script src="./js/lightbox.js"></script>
+    </body>
+</html>
