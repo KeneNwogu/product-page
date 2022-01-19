@@ -59,20 +59,31 @@
         padding: 40px 13px;
         border-radius: 10px;
     }
-    .next{
+    .large-image > .next{
         position: absolute;
         top: 50%;
         left: 90%;
     }
-    .previous{
+    .large-image > .previous{
         position: absolute;
         top: 50%;
         right: 90%;
     }
+
+    #lightbox{
+        display: none;
+    }
 }
 
-@media screen and (min-width: 1439px) {
+@media screen and (min-width: 1200px) {
     .hamburger-menu{
+        display: none;
+    }
+
+    .large-image > .next{
+        display: none;
+    }
+    .large-image > .previous{
         display: none;
     }
 }

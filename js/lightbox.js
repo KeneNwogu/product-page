@@ -18,6 +18,7 @@ prev.addEventListener('click', () =>  {slideImage(-1)});
 next.addEventListener('click', () =>  {slideImage(1)});
 close_btn.addEventListener('click', () => {
     lightbox.classList.add('none');
+    console.log('closed')
 })
 
 thumb_nails.forEach(element => {
