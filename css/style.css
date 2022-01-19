@@ -11,7 +11,9 @@
     font-family: "Kumbh Sans";
     src: url('../Kumbh_Sans/KumbhSans-VariableFont_wght.ttf');
 }
-
+/* *{
+    margin: 0;
+} */
 html{
     box-sizing: border-box;
     color: var(--black);
@@ -23,10 +25,11 @@ button{
     cursor: pointer;
 }
 
+
 nav > ul{
     margin: 0;
     padding: 0;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     list-style: none;
     padding: 2em;

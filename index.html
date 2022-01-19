@@ -26,18 +26,20 @@
             }
         </style>
         <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/lightbox.css">
+        <link rel="stylesheet" href="./css/responsive.css">
     </head>
     <body>
         <nav>
             <ul>
                 <div class="nav-links">
-                    <li><img src="./images/logo.svg" alt=""></li>
-                    <li><a href="">Collections</a></li>
-                    <li><a href="">Men</a></li>
-                    <li><a href="">Women</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li class="hamburger-menu"><img src="./images/icon-menu.svg" alt=""></li>
+                    <li class="image-logo"><img src="./images/logo.svg" alt=""></li>
+                    <li class="nav-link"><a href="">Collections</a></li>
+                    <li class="nav-link"><a href="">Men</a></li>
+                    <li class="nav-link"><a href="">Women</a></li>
+                    <li class="nav-link"><a href="">About</a></li>
+                    <li class="nav-link"><a href="">Contact</a></li>
                 </div>
 
                 <div class="nav-images">
@@ -51,7 +53,7 @@
             </ul>
         </nav>
         
-        <div id="cart" class="none">
+        <div id="cart" class="">
             <p>Cart</p>
             <!-- <div class="cart-item">
                 <div><img class="cart-thumbnail" src="./images/image-product-1-thumbnail.jpg"></div>
@@ -69,6 +71,15 @@
             <div class="product-images">
                 <div class="large-image">
                     <img src="./images/image-product-1.jpg" alt="">
+                    <span class="nav-icon previous">
+                        <img src="./images/icon-previous.svg" alt="">
+                    </span>
+                    <span class="nav-icon next">
+                        <img src="./images/icon-next.svg" alt="" srcset="">
+                    </span>  
+                    <span class="close">
+                        <img src="./images/icon-close.svg" alt="" srcset="">
+                    </span>  
                 </div>
 
                 <div class="image-thumbnail-container">
@@ -87,12 +98,15 @@
                     Featuring a
                     durable rubber outer sole, they’ll withstand everything the weather can offer.
                 </p>
-                <div class="prices">
-                    <p class="discount-price">$125.00</p>
-                    <p class="discount">50%</p>
-                </div>
-                <p class="price-cut">$250.00</p>
 
+                <section id="pricing">
+                    <div class="prices">
+                        <p class="discount-price">$125.00</p>
+                        <p class="discount">50%</p>
+                    </div>
+                    <p class="price-cut">$250.00</p>
+                </section>
+                
                 <div class="add-cart">
                     <span class="quantity-button-span">
                         <button id="minus-item-quantity"><img src="./images/icon-minus.svg"></button>
@@ -109,7 +123,27 @@
         </div>
 
 
-        
+        <section id="lightbox" class="none">
+            <div class="lightbox-large-image">
+                <img src="./images/image-product-1.jpg" alt="">
+                <span class="nav-icon previous">
+                    <img src="./images/icon-previous.svg" alt="">
+                </span>
+                <span class="nav-icon next">
+                    <img src="./images/icon-next.svg" alt="" srcset="">
+                </span>  
+                <span class="close">
+                    <img src="./images/icon-close.svg" alt="" srcset="">
+                </span>  
+            </div>
+
+            <div class="image-thumbnail-container">
+                <img src="./images/image-product-1-thumbnail.jpg" alt="" class="thumbnail active">
+                <img src="./images/image-product-2-thumbnail.jpg" alt="" class="thumbnail">
+                <img src="./images/image-product-3-thumbnail.jpg" alt="" class="thumbnail">
+                <img src="./images/image-product-4-thumbnail.jpg" alt="" class="thumbnail">
+            </div>
+        </section>
         <!-- <div class="attribution">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
             Coded by <a href="#">Your Name Here</a>.
@@ -117,6 +151,7 @@
         <script src="./js/jquery-3.4.1.min.js"></script>
 
         <script src="./js/cart.js"></script>
+        <script src="./js/lightbox.js"></script>
     </body>
 
 </html>

@@ -1,0 +1,72 @@
+#lightbox {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(102, 102, 102, 0.5);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+}
+.lightbox-large-image{
+    position: relative;
+}
+.lightbox-large-image>img {
+    width: 30vw;
+    max-height: 65vh;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.image-thumbnail-container>img {
+    border-radius: 12px;
+    width: 64px;
+    margin: 12px;
+}
+
+.cart-thumbnail {
+    border-radius: 12px;
+    width: 3em;
+}
+
+.image-thumbnail-container {
+    margin: 6px 8px;
+}
+.nav-icon{
+    padding: 12px;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    /* margin: 10px; */
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+.nav-icon>img{
+    position: absolute;
+    bottom: 20%;
+}
+.previous{
+    position: absolute;
+    top: 50%;
+    right: 95%;
+}
+.next{
+    position: absolute;
+    top: 50%;
+    left: 95%;
+}
+.close{
+    position: absolute;
+    bottom: 100%;
+    cursor: pointer;
+}
+.active{
+    border: 1.9px solid orange;
+}
+
+.none{
+    display: none !important;
+}

@@ -1,12 +1,24 @@
+let lightbox = document.querySelector('#lightbox')
 let thumb_nails = document.querySelectorAll('.thumbnail');
+
+// site main image
 let large_image = document.querySelector('.large-image>img');
+let lightbox_large_image = document.querySelector('.lightbox-large-image>img');
+
+large_image.addEventListener('click', () => {
+    lightbox.classList.remove('none');
+})
 let current_image_index = 0;
 let carousel_images = ['./images/image-product-1.jpg', './images/image-product-2.jpg', './images/image-product-3.jpg', './images/image-product-4.jpg']
 let prev = document.querySelector('.previous');
 let next = document.querySelector('.next');
+let close_btn = document.querySelector('.close');
 
 prev.addEventListener('click', () =>  {slideImage(-1)});
 next.addEventListener('click', () =>  {slideImage(1)});
+close_btn.addEventListener('click', () => {
+    lightbox.classList.add('none');
+})
 
 thumb_nails.forEach(element => {
     element.addEventListener('click', () => {
@@ -25,6 +37,7 @@ changeImage = function(element){
     let image_url = url.split('-').slice(0, -1).join('-') + '.jpg';
     console.log(image_url)
     large_image.setAttribute('src', image_url);
+    lightbox_large_image.setAttribute('src', image_url);
 }
 
 slideImage = function(value){
@@ -50,7 +63,7 @@ slideImage = function(value){
 
     let image_url = carousel_images[current_image_index];
     large_image.setAttribute('src', image_url);
-
+    lightbox_large_image.setAttribute('src', image_url);
     changeActiveClass();
     console.log(current_image_index)
 }
