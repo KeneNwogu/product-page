@@ -220,6 +220,7 @@ p.product-description-text, .price-cut{
 
 .cart-item{
     color: var(--dark-grayish-blue);
+    margin-top: 12px;
 }
 
 .none{
