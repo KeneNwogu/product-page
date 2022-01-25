@@ -1,4 +1,4 @@
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px){
     *{
         margin: 0;
     }
@@ -12,6 +12,7 @@
         flex-direction: column;
         margin: 0 auto;
     }
+
     .large-image > img{
         width: 100vw;
         border-radius: 0;
@@ -29,8 +30,8 @@
     p.company-title, .product-title, .product-description-text{
         margin-bottom: 12px;
     }
-    .product-description-text{
-        width: 80%;
+    p.product-description-text{
+        width: 95%;
         line-height: 1.8em;
     }
     #pricing{
